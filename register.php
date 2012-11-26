@@ -20,5 +20,8 @@
 		<input type="radio" name="gender" value="female"> Female <br/>
 	<p><input type="submit" value="Continue &rarr;"></p>
 	</form>
+	<?
+		include_once("./footer.php");
+	?>
 </body>
 </html>

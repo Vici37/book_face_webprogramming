@@ -8,6 +8,7 @@
 		include_once("./header.php");
 		require_once("./db_connect.inc");
 	?>
+	<div id='login'>
 	<form action="#" method="post">
 		<div id="login">
 		<label>Username:</label><input type="text" name="user" /><br />
@@ -15,5 +16,8 @@
 		<button type="submit">Sign-In</button>
 	</form>
 	</div>
+	<?
+		include_once("./footer.php");
+	?>
 </body>
 </html>

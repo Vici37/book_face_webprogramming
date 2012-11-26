@@ -12,9 +12,8 @@
 		//If user isn't logged in, display login
 		if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])){
 			if (isset($_REQUEST["user"],$_REQUEST["pass"])) {
-				// TODO: check if credentials work
-				$hash = _hash($_REQUEST['pass']);
-				$query = "SELECT name, user_id FROM users WHERE name='".$_REQUEST['user']."' AND password='".$hash."'";
+				$hash = _hash($_REQUEST['user'],$_REQUEST['pass']);
+				$query = "SELECT email, user_id FROM users WHERE email='".$_REQUEST['user']."' AND password='".$hash."'";
 				$results = $db->query($query);
 				if ($results->num_rows == 1) {
 					$_SESSION['user']=$_REQUEST['user'];
@@ -28,7 +27,7 @@
 				?>
 				<div id="login">
 					<form action="" method="post">
-						<label>Username:</label><input type="text" name="user" /><br />
+						<label>Email:</label><input type="text" name="user" /><br />
 						<label>Password:</label><input type="password" name="pass" /><br />
 						<button type="submit">Sign-In</button>
 					</form>

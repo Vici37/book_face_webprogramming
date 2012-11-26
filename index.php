@@ -5,7 +5,8 @@
 	<title>My Book Face</title>
 </head>
 <body>
-	<a href="./login.php" ref="login">Login</a> | 
-	<a href="./create_account.php" ref="register">Register</a>
+<? 
+	include_once("./header.php");
+?>
 </body>
 </html>

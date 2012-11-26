@@ -1,3 +1,2 @@
 <?
-	echo $_REQUEST['id'];
 ?>

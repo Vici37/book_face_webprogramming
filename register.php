@@ -9,8 +9,8 @@
 		if($_REQUEST['password'] == null) $error .= "Password can't be blank.<br/>";
 		// Check email
 		if($_REQUEST['email'] == null) $error .= "Email can't be left blank.<br/>";
-		else if(!(preg_match("/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/",
-				$_REQUEST['email']) === 1)) $error .= "Inproper Email format.<br/>";
+		else if(preg_match("/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/",
+				$_REQUEST['email']) !== 1) $error .= "Inproper Email format.<br/>";
 		else {
 			$query = "SELECT email FROM users WHERE email='".$_REQUEST['email']."'";
 			$result = $db->query($query);
@@ -18,7 +18,7 @@
 		}
 		//Assuming everything works
 		if($error == null) {
-			if (!isset($_REQUEST['gender']) || $_REQUEST['gender'] == "male" || $_REQUEST['gender'] == "female") {
+			if (!isset($_REQUEST['gender']) || ($_REQUEST['gender'] != "Male" && $_REQUEST['gender'] != "Female")) {
 				$_REQUEST['gender'] = "NULL";
 			} else {
 				$_REQUEST['gender'] = "'".$_REQUEST['gender']."'";
@@ -45,10 +45,9 @@
 		<label for="email">Email</label><input type="text" name="email" value="<? if($_REQUEST['email']!=null) echo $_REQUEST['email']; ?>" id="email"><br/>
 		<label for="password">Password:</label><input type="password" name="password" value="" id="password"><br/>
 		<label for="Confirm Password">Confirm Password</label><input type="password" name="confirm" value="" id="Confirm Password"><br/>
-		<? echo $_REQUEST['gender']."<br/>"; ?>
 		<label for="gender">Gender (Optional)</label>
-		<input type="radio" name="gender" value="male" <? if($_REQUEST['gender'] == "male") echo "checked"; ?>> Male
-		<input type="radio" name="gender" value="female"<? if($_REQUEST['gender'] == "female") echo "checked"; ?>> Female <br/>
+		<input type="radio" name="gender" value="Male" <? if($_REQUEST['gender'] == "male") echo "checked"; ?>> Male
+		<input type="radio" name="gender" value="Female"<? if($_REQUEST['gender'] == "female") echo "checked"; ?>> Female <br/>
 		<input type="hidden" name="registering" value="1">
 		<input type="submit" value="Continue &rarr;">
 	</form>

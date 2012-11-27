@@ -22,6 +22,9 @@
 		else { ?>
 			<a href="./index.php?profile&id=<? echo $_SESSION['user_id']?>" ref="profile">My Profile</a> |
 			<a href="./logout.php" ref="logout">Logout</a> |
+			<? if($_REQUEST['id'] == $_SESSION['user_id']) { ?>
+				<a href="./index.php?profile&id=<? echo $_REQUEST['id']; ?>&edit=1" ref="edit">Edit</a> |
+			<? } ?>
 		<? }//Always display these links ?>
 		<a href="./index.php?about" ref="about">About</a>
 	</div>

@@ -77,6 +77,9 @@
 						case 'friends':
 							include_once("./friends.inc");
 							break;
+						case 'comments':
+							include_once("./comments.php");
+							break;
 						default:
 							include_once("./home.inc");
 							break;

@@ -1,7 +1,7 @@
 <?
 	if(isset($_REQUEST['update_status'])) {
 		if ($_REQUEST['status_update'] != "") {
-			include_once("./db_connect.inc");
+			require_once("./db_connect.inc");
 			session_start();
 			$datetime = strftime("%F %T");
 			$query = "INSERT INTO statuses (status_id, user_id, status, time) VALUES (NULL, '".$_SESSION['user_id']."', '".addslashes($_REQUEST['status_update'])."', '".$datetime."')";

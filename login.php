@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>My Book Face</title>
+	<link rel="stylesheet" href="styles/login.css" type="text/css" />
 </head>
 <body>
 	<?
@@ -10,8 +11,7 @@
 	?>
 	<div id='login'>
 	<form action="#" method="post">
-		<div id="login">
-		<label>Username:</label><input type="text" name="user" /><br />
+		<label>Email:</label><input type="text" name="user" /><br />
 		<label>Password:</label><input type="password" name="pass" /><br />
 		<button type="submit">Sign-In</button>
 	</form>

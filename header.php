@@ -7,9 +7,9 @@
 	}
 ?>
 <div id="header">
-	<a href="./index.php" ref="home">
+<!--	<a href="./index.php" ref="home">
 		<img src="images/BookFace2.jpg" alt="logo" />
-	</a><br/>
+	</a><br/>--!>
 	<div id="menu">
 		<? 
 			session_start();

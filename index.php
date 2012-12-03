@@ -64,11 +64,22 @@
 			?>
 			<div id="content">
 				<?
-					// profile page
-					if($location == "profile") include_once("./profile.php");
-					// home page
-					else {
-						include_once("./home.php");
+					switch ($location) {
+						// Profile page
+						case 'profile':
+							include_once("./profile.inc");
+							break;
+						// Members page
+						case 'members':
+							include_once("./member.inc");
+							break;
+						// Home page
+						case 'friends':
+							include_once("./friends.inc");
+							break;
+						default:
+							include_once("./home.inc");
+							break;
 					}
 				?>
 			</div>

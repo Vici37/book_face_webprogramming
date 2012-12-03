@@ -3,6 +3,7 @@
 	<head>
 		<meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
 		<title>My Book Face</title>
+		<link rel="stylesheet" href="styles/master.css" type="text/css" />
 	</head>
 	<body>
 	<? 
@@ -48,14 +49,7 @@
 				}
 			} else { 
 				if(isset($_REQUEST['dud'])) echo "<div id='dud'>Bad username or password!</div>";
-				?>
-				<div id="login">
-					<form action="" method="post">
-						<label>Email:</label><input type="text" name="user" /><br />
-						<label>Password:</label><input type="password" name="pass" /><br />
-						<button type="submit">Sign-In</button>
-					</form>
-				</div>	<?
+				include_once("./login.php");
 			}
 		} 
 		// This block for logged in. Either at home or profile page

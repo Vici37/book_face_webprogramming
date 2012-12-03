@@ -8,7 +8,7 @@
 ?>
 <div id="header">
 	<a href="./index.php" ref="home">
-		<img src="images/bookface1.jpg" alt="logo" />
+		<img src="images/BookFace2.jpg" alt="logo" />
 	</a><br/>
 	<div id="menu">
 		<? 

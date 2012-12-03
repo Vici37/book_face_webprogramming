@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2012 at 12:17 PM
+-- Generation Time: Dec 03, 2012 at 12:22 PM
 -- Server version: 5.1.66
 -- PHP Version: 5.3.6-13ubuntu3.9
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `Book_Face`
 --
+CREATE DATABASE `Book_Face` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `Book_Face`;
 
 -- --------------------------------------------------------
 
@@ -109,31 +111,6 @@ INSERT INTO `statuses` (`status_id`, `user_id`, `status`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
-  `email` text NOT NULL,
-  `password` text NOT NULL,
-  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'This is the key for all other tables',
-  PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='This table used for login purposes' AUTO_INCREMENT=31 ;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`email`, `password`, `user_id`) VALUES
-('whatever@here1.com', 'ddfcbc820f415bda61c38516829c508d4762d9a781dc9bdb52d04dc20036dbd8313ed0556b7be712086b5ab308c88e926323737fe20e7c94', 30),
-('whatever@here.com', 'b577496958b1c54c281ae6b7897ee340236afbad81dc9bdb52d04dc20036dbd8313ed0557ffe274f8c8c08bba8c6843f4f0d6b1fab23c351', 29),
-('a@a.c', '1a7d285e542b567059246a2adda8a93f1286207481dc9bdb52d04dc20036dbd8313ed0553b2622c083beb9f6bd54f78e6ddc3f7bb2fa8e37', 28),
-('a@a.b', 'b82936ac436a7e0889a8b2bc08972e2b1cc9bc9881dc9bdb52d04dc20036dbd8313ed055cb29f6f55041152c74719a57af26fb4f54855841', 25),
-('a@a.a', 'd656370089fedbd4313c67bfdc24151fb7c0fe8b81dc9bdb52d04dc20036dbd8313ed0557e309907e0e24722061fd0225c732fe9a46f19a0', 24),
-('asdf', '3da541559918a808c2402bba5012f6c60b27661c81dc9bdb52d04dc20036dbd8313ed055d631600ee726f291e0aed59252c68b6565ea6803', 23);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user_information`
 --
 
@@ -155,6 +132,31 @@ INSERT INTO `user_information` (`user_id`, `first_name`, `last_name`, `gender`) 
 (28, 'asdf', 'asdf', 'Female'),
 (29, 'troy', 'sornson', 'Male'),
 (30, 'asdfads', 'fadsfadsfasd', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'This is the key for all other tables',
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='This table used for login purposes' AUTO_INCREMENT=31 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`email`, `password`, `user_id`) VALUES
+('whatever@here1.com', 'ddfcbc820f415bda61c38516829c508d4762d9a781dc9bdb52d04dc20036dbd8313ed0556b7be712086b5ab308c88e926323737fe20e7c94', 30),
+('whatever@here.com', 'b577496958b1c54c281ae6b7897ee340236afbad81dc9bdb52d04dc20036dbd8313ed0557ffe274f8c8c08bba8c6843f4f0d6b1fab23c351', 29),
+('a@a.c', '1a7d285e542b567059246a2adda8a93f1286207481dc9bdb52d04dc20036dbd8313ed0553b2622c083beb9f6bd54f78e6ddc3f7bb2fa8e37', 28),
+('a@a.b', 'b82936ac436a7e0889a8b2bc08972e2b1cc9bc9881dc9bdb52d04dc20036dbd8313ed055cb29f6f55041152c74719a57af26fb4f54855841', 25),
+('a@a.a', 'd656370089fedbd4313c67bfdc24151fb7c0fe8b81dc9bdb52d04dc20036dbd8313ed0557e309907e0e24722061fd0225c732fe9a46f19a0', 24),
+('asdf', '3da541559918a808c2402bba5012f6c60b27661c81dc9bdb52d04dc20036dbd8313ed055d631600ee726f291e0aed59252c68b6565ea6803', 23);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

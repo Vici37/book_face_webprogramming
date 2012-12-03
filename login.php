@@ -10,6 +10,7 @@
 		require_once("./db_connect.inc");
 	?>
 	<div id='login'>
+		<?if(isset($_REQUEST['dud'])) echo "<div id='dud'>Bad username or password!</div>";?>
 	<form action="#" method="post">
 		<label>Email:</label><input type="text" name="user" /><br />
 		<label>Password:</label><input type="password" name="pass" /><br />

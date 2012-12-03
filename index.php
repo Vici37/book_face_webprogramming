@@ -48,7 +48,6 @@
 					header('location:?dud=1');
 				}
 			} else { 
-				if(isset($_REQUEST['dud'])) echo "<div id='dud'>Bad username or password!</div>";
 				include_once("./login.php");
 			}
 		} 

@@ -4,6 +4,7 @@
 		<meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
 		<title>My Book Face</title>
 		<link rel="stylesheet" href="styles/master.css" type="text/css" />
+		<link rel="shortcut icon" href="images/book_face.png" type="image/x-icon" />
 	</head>
 	<body>
 	<? 

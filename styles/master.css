@@ -1,3 +1,7 @@
+body {
+	font-family: "Segoe UI", Arial, Sans-Serif;
+}
+
 a:link {
 	text-decoration: none;
 	font-weight: bold;

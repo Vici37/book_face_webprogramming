@@ -48,7 +48,6 @@
 					header('location:?dud=1');
 				}
 			} else { 
-				if(isset($_REQUEST['dud'])) echo "<div id='dud'>Bad username or password!</div>";
 				include_once("./login.php");
 			}
 		} 
@@ -70,6 +69,9 @@
 						// Home page
 						case 'friends':
 							include_once("./friends.inc");
+							break;
+						case 'comments':
+							include_once("./comments.php");
 							break;
 						default:
 							include_once("./home.inc");

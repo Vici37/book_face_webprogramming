@@ -17,9 +17,11 @@
 			if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])) {
 		?>
 			<a href="./index.php?register" ref="register">Register</a> | 
+			<a href="./index.php" ref="login">Login</a> |
 		<? }
 		// Display these links only if logged in
 		else { ?>
+			<a href="./index.php" ref="home">Home</a> |
 			<a href="./index.php?members" ref="members">Members</a> |
 			<a href="./index.php?friends" ref="friends">My Friends</a> |
 			<a href="./index.php?profile&id=<? echo $_SESSION['user_id']?>" ref="profile">My Profile</a> |

@@ -14,6 +14,7 @@
 	<form id='login' action="#" method="post">
 		<label id='user'>Email:</label><input id="user"  type="text" name="user" /><br />
 		<label id='pass'>Password:</label><input id="pass" type="password" name="pass" /><br />
+		<?if(isset($_REQUEST['dud'])) echo "<div id='dud'>Bad username or password!</div>";?>
 		<button type="submit">Sign-In</button>
 	</form>
 	</span>

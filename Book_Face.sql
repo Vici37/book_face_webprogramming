@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `Book_Face`
 --
-CREATE DATABASE `Book_Face` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `Book_Face` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `Book_Face`;
 
 -- --------------------------------------------------------

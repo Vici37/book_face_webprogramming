@@ -16,7 +16,7 @@
 			// Display these links only if not logged in
 			if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])) {
 		?>
-			<a href="./index.php?register" ref="register">Register</a> |
+			<a href="./index.php?register" ref="register">Register</a> | 
 		<? }
 		// Display these links only if logged in
 		else { ?>

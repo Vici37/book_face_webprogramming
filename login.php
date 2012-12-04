@@ -10,11 +10,13 @@
 		require_once("./db_connect.inc");
 	?>
 	<div id='login'>
-	<form action="#" method="post">
-		<label>Email:</label><input type="text" name="user" /><br />
-		<label>Password:</label><input type="password" name="pass" /><br />
+	<span id='login'>
+	<form id='login' action="#" method="post">
+		<label id='user'>Email:</label><input id="user"  type="text" name="user" /><br />
+		<label id='pass'>Password:</label><input id="pass" type="password" name="pass" /><br />
 		<button type="submit">Sign-In</button>
 	</form>
+	</span>
 	</div>
 	<?
 		include_once("./footer.php");

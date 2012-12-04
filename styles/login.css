@@ -5,7 +5,42 @@ body {
 	color: #cdcdcd;
 }
 
-div#login {
-	margin: 4em 0;
+span#login {
+	background-color: #cdcdcd;
+	display: inline-block;
+	margin-top: 5em;
+	width: 20em;
+	height: 10em;
+	position: absolute;
+	left: 0;
+	color: #130709;	
+	box-shadow: 8px 8px 10px #30050E;
 }
 
+label#pass,
+label#user 
+{
+	font-size: 2em;	
+}
+
+form#login * {
+	border: none;
+}
+
+form#login {
+	padding: 1.5em .5em 0 0;
+	margin-left: 3%;
+} 
+
+input {
+	font-size: 1em;
+	width: 50%;
+}
+
+input#user {
+	margin-left: 4.1em; 
+}
+
+input#pass {
+	margin-left: .7em; 
+}

@@ -1,18 +1,9 @@
-<? //Define some global functions here...
-	// This function will return a hash of the given text (for passwords)
-	function _hash($text1,$text2) {
-		$str = "";
-		$str .= sha1($text1).md5($text2).sha1(md5($text1).md5($text2));
-		return $str;
-	}
-?>
 <div id="header">
 <!--	<a href="./index.php" ref="home">
 		<img src="images/BookFace2.jpg" alt="logo" />
 	</a><br/>--!>
 	<div id="menu">
 		<? 
-			session_start();
 			// Display these links only if not logged in
 			if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])) {
 		?>

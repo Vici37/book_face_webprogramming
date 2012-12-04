@@ -5,10 +5,6 @@
 	<link rel="stylesheet" href="styles/login.css" type="text/css" />
 </head>
 <body>
-	<?
-		include_once("./header.php");
-		require_once("./db_connect.inc");
-	?>
 	<div id='login'>
 	<span id='login'>
 	<form id='login' action="#" method="post">
@@ -20,8 +16,5 @@
 	</form>
 	</span>
 	</div>
-	<?
-		include_once("./footer.php");
-	?>
 </body>
 </html>

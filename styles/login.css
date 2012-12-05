@@ -44,6 +44,9 @@ a#register {
 	font-size: 1.75em;
 	padding: .05em .60em;
 	-webkit-transition: text-shadow 1s;
+	-moz-transition: text-shadow 1s;
+	-o-transition: text-shadow 1s;
+	transition: text-shadow 1s;
 }
 
 input#signin {
@@ -70,6 +73,6 @@ input#user {
 }
 
 input#pass {
-	margin-left: .7em; 
+	margin-left: .5em; 
 	margin-bottom: .75em;
 }

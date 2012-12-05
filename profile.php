@@ -7,7 +7,7 @@
 	$personal = $db->query($query);
 	$personal = $personal->fetch_assoc();
 	if(isset($_REQUEST['edit']) && $_REQUEST['id'] == $_SESSION['user_id']) { ?>
-		Still under developement, won't update anything yet.<br/>
+		Still under development, won't update anything yet.<br/>
 		<div id="name">
 			<form action="profile.php" method="post" accept-charset="utf-8">
 				<label for="email">Email</label><input type="text" name="email" value="<? echo $_SESSION['user']; ?>" id="email"><br/>

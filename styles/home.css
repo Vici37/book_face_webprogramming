@@ -1,0 +1,20 @@
+div#status_update {
+	position: fixed;
+	margin-top: 5em;
+	background-color: rgba(19,7,9,.7);
+	right: 0;
+	display: inline-block;
+	color: #cdcdcd;	
+	padding-left: 1em;
+	z-index: 0;
+}
+
+span#statuses {
+	display: inline-block;
+	margin-top: 5em;
+}
+
+label.header {
+	font-size: 2em;
+	margin-bottom: 1em;
+}

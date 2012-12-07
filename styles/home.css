@@ -24,6 +24,8 @@ span.status {
 	word-wrap: break-word;
 	width: 25em;
 	margin: .75em 0;
+	padding: 1em 2em;
+	box-shadow: 5px 5px 5px #130709;
 } 
 
 span.status.odd {
@@ -31,14 +33,14 @@ span.status.odd {
 }
 
 span.status.odd1 {
-	background-color: rgba(205,205,205,.7);
-	color: #130709;
+	background-color: rgba(35,24,30,.7);
 }
 
 label.header {
 	font-size: 2em;
 	display: inline-block;
 	padding-bottom: .75em;
+	color: #cdcdcd;
 }
 
 textarea#status_update {

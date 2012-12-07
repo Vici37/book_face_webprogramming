@@ -31,8 +31,13 @@
 		<title>My Book Face</title>
 		<link rel="stylesheet" href="styles/login.css" type="text/css" />
 		<link rel="stylesheet" href="styles/header.css" type="text/css" />
+		<link rel="stylesheet" href="styles/friends.css" type="text/css" />
+		<link rel="stylesheet" href="styles/about.css" type="text/css" />
 		<link rel="stylesheet" href="styles/master.css" type="text/css" />
+		<link rel="stylesheet" href="styles/edit.css" type="text/css" />
 		<link rel="stylesheet" href="styles/home.css" type="text/css" />
+		<link rel="stylesheet" href="styles/footer.css" type="text/css" />
+		<link rel="stylesheet" href="styles/members.css" type="text/css" />
 		<link rel="stylesheet" href="styles/profile.css" type="text/css" />
 		<link rel="shortcut icon" href="images/book_face.png" type="image/x-icon" />
 	</head>

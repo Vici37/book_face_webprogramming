@@ -1,3 +1,3 @@
 <div id="footer">
-	Footer
+	&copy;Fidder, Morris, &amp; Sornson
 </div>

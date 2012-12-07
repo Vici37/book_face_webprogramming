@@ -33,6 +33,7 @@
 		<link rel="stylesheet" href="styles/header.css" type="text/css" />
 		<link rel="stylesheet" href="styles/master.css" type="text/css" />
 		<link rel="stylesheet" href="styles/home.css" type="text/css" />
+		<link rel="stylesheet" href="styles/profile.css" type="text/css" />
 		<link rel="shortcut icon" href="images/book_face.png" type="image/x-icon" />
 	</head>
 	<body>

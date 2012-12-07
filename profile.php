@@ -27,18 +27,7 @@
 		<div id="personal">
 			First name: <? echo $personal['first_name']; ?><br/>
 			Last name: <? echo $personal['last_name']; ?><br/>
-			<? if(isset($personal['gender'])) echo "Gender: ".$personal['gender']."<br/>"; 
-			include_once("status_box.php");
-			$query = "SELECT * FROM statuses INNER JOIN user_information ON statuses.user_id=user_information.user_id WHERE statuses.user_id='".$_SESSION['user_id']."' ORDER BY time DESC LIMIT 5";
-			$results = $db->query($query);
-			for ($i = 0; $i < $results->num_rows; ++$i) {
-				$row = $results->fetch_assoc(); ?>
-				<a href="./index.php?profile&id="<? echo $row['user_id']; ?> ref="name"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
-				<? echo $row['status'];?><br/>
-				<? echo $row['time'];?><br/>
-				<? $query = "SELECT * FROM comments WHERE status_id='".$row['status_id']."'";
-					$comments = $db->query($query);?>
-				<a href="./index.php?comments&id=<? echo $row['status_id']; ?>" ref="comments"><? echo $comments->num_rows." Comments";?></a><br/>
-			<? } ?>
+			<? if(isset($personal['gender'])) echo "Gender: ".$personal['gender']."<br/>"; ?> 
 		</div>
-<? } ?>
+		<?	include_once("home.inc");
+		} ?>

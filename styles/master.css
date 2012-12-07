@@ -7,3 +7,11 @@ a:link {
 	font-weight: bold;
 	color: #008A00;
 }
+
+a:hover {
+	text-decoration: underline;
+}
+
+a#register:hover {
+	text-decoration: none; 
+}

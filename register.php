@@ -24,6 +24,11 @@
 			} else {
 				$_REQUEST['gender'] = "'".$_REQUEST['gender']."'";
 			} 
+			function _hash($text1,$text2) {
+				$str = "";
+				$str .= sha1($text1).md5($text2).sha1(md5($text1).md5($text2));
+				return $str;
+			}
 			//NULL will auto-increment for the user_id
 			$query = "INSERT INTO users (email,password,user_id) VALUES ('".$_REQUEST['email']."','"._hash($_REQUEST['email'],$_REQUEST['password'])."',NULL)";
 			$db->query($query);

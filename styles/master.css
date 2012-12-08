@@ -1,5 +1,5 @@
 body {
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/ /*Don't need everything to be cap case...*/
 	font-family: "Segoe UI", Arial, Sans-Serif;
 }
 

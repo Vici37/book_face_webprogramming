@@ -3,6 +3,8 @@
 	$results = $db->query($query);
 	$query = "SELECT * FROM friends_relations WHERE user_id='".$_SESSION['user_id']."'";
 	$friends = $db->query($query);
+	$query = "SELECT * FROM friend_requests WHERE user_id='".$_SESSION['user_id']."'";
+	$requests = $db->query($query);
 	$already_friends = array();
 	for ($i = 0; $i < $friends->num_rows; ++$i) {
 		$row = $friends->fetch_assoc();

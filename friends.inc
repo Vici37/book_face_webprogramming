@@ -1,4 +1,13 @@
 <?
+	$query = "SELECT * FROM friends_requests INNER JOIN user_information ON friends_requests.user_id=user_information.user_id WHERE requesting_user_id='".$_SESSION['user_id']."'";
+	$results = $db->query($query);
+	for ($i = 0; $i < $results->num_rows; $i++) {
+		 $row = $results->fetch_assoc();
+	}
+	echo "People requesting to be your friend:"
+	for ($i = 0; $i < count; $i++) {
+		 // code...
+	}
 	$query = "SELECT * FROM friends_relations WHERE user_id='".$_SESSION['user_id']."'";
 	$results = $db->query($query);
 	if($results->num_rows > 0) {

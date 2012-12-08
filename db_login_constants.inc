@@ -1,6 +1,6 @@
 <?
-	$user = "book_face";
+	$user = "team02";
 	$host = "localhost";
-	$password = "1234";
-	$database = "Book_Face"
+	$password = "chartreuse";
+	$database = "team02"
 ?>

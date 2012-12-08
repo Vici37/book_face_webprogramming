@@ -1,5 +1,6 @@
 <?
 	if(isset($_REQUEST['registering'])) {
+		require_once("./db_connect.inc");
 		//Check information...
 
 		$error = "";
@@ -31,15 +32,17 @@
 			$result = $result->fetch_assoc();
 			$query = "INSERT INTO user_information (user_id, first_name, last_name, gender) VALUES ('".$result['user_id']."','".$_REQUEST['fname']."','".$_REQUEST['lname']."',".$_REQUEST['gender'].")";
 			$db->query($query);
-			header('location:/');
+			header('location:./index.php');
+		} else {
+			header('location:./index.php?register&error='.$error);
 		}
 	}
 ?>
 <div id="error">
-	<? echo $error; ?>	
+	<? if(isset($_REQUEST['error'])) echo $_REQUEST['error']; ?>	
 </div>
 <div id='register'>
-	<form action="" method="post" accept-charset="utf-8">
+	<form action="./register.php" method="post" accept-charset="utf-8">
 		<label for="fname">First Name</label><input type="text" name="fname" value="<? if($_REQUEST['fname']!=null) echo $_REQUEST['fname']; ?>" id="fname"><br/>
 		<label for="lname">Last Name</label><input type="text" name="lname" value="<? if($_REQUEST['lname']!=null) echo $_REQUEST['lname']; ?>" id="lname"><br/>
 		<label for="email">Email</label><input type="text" name="email" value="<? if($_REQUEST['email']!=null) echo $_REQUEST['email']; ?>" id="email"><br/>

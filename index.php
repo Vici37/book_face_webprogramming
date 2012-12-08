@@ -1,3 +1,29 @@
+<? 
+ 	//Define some global functions here...
+	// This function will return a hash of the given text (for passwords)
+	function _hash($text1,$text2) {
+		$str = "";
+		$str .= sha1($text1).md5($text2).sha1(md5($text1).md5($text2));
+		return $str;
+	}
+	require_once("./db_connect.inc");
+	session_start(); 
+	if(!isset($_SESSION['user']) || !isset($_SESSION['user_id'])){
+		if (isset($_REQUEST["user"],$_REQUEST["pass"])) {
+			$hash = _hash($_REQUEST['user'],$_REQUEST['pass']);
+			$query = "SELECT email, user_id FROM users WHERE email='".$_REQUEST['user']."' AND password='".$hash."'";
+			$results = $db->query($query);
+			if ($results->num_rows == 1) {
+				$_SESSION['user']=$_REQUEST['user'];
+				$userid=$results->fetch_assoc();
+				$_SESSION['user_id']=$userid['user_id'];
+				header('location:./index.php');
+			} else {
+				header('location:?dud=1');
+			}
+		} 
+	} 
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -9,7 +35,6 @@
 	<body>
 	<? 
 		include_once("./header.php");
-		require_once("./db_connect.inc");
 		// $location will eventually contain the information of what page
 		// we're on.
 		$location = explode('?', $_SERVER['REQUEST_URI'], 2);
@@ -36,18 +61,6 @@
 			// register page
 			if($location == "register"){
 				include_once("./register.php");
-			} else if (isset($_REQUEST["user"],$_REQUEST["pass"])) {
-				$hash = _hash($_REQUEST['user'],$_REQUEST['pass']);
-				$query = "SELECT email, user_id FROM users WHERE email='".$_REQUEST['user']."' AND password='".$hash."'";
-				$results = $db->query($query);
-				if ($results->num_rows == 1) {
-					$_SESSION['user']=$_REQUEST['user'];
-					$userid=$results->fetch_assoc();
-					$_SESSION['user_id']=$userid['user_id'];
-					header('location:./index.php');
-				} else {
-					header('location:?dud=1');
-				}
 			} else { 
 				include_once("./login.php");
 			}
@@ -61,7 +74,7 @@
 					switch ($location) {
 						// Profile page
 						case 'profile':
-							include_once("./profile.inc");
+							include_once("./profile.php");
 							break;
 						// Members page
 						case 'members':

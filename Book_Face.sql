@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `Book_Face`
 --
-CREATE DATABASE `Book_Face` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `Book_Face` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `Book_Face`;
 
 -- --------------------------------------------------------
@@ -38,15 +38,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
 --
 -- Dumping data for table `comments`
 --
-
-INSERT INTO `comments` (`status_id`, `user_id`, `comment`, `time`) VALUES
-(3, 24, 'This is a comment\r\n\r\n-Troy', '2012-12-10 01:01:01'),
-(3, 28, 'This is another comment', '2012-12-10 01:01:02'),
-(3, 29, 'This is a comment', '2012-12-03 11:17:24'),
-(3, 29, 'comment take 2', '2012-12-03 11:17:47'),
-(40, 29, 'I''m commenting on my own status!', '2012-12-03 11:25:35'),
-(41, 29, 'yadda', '2012-12-03 12:08:24'),
-(41, 29, 'as;ldkfjads;lfkjads;fkljads;f', '2012-12-03 12:09:19');
 
 -- --------------------------------------------------------
 

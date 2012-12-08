@@ -9,7 +9,10 @@
 		<?
 			include_once("./header.php");
 		?>
-		Brought to you by the creators of Head Desk is Book Face!
+		<span id="aboutUs">
+		<label class="header">About Us</label><br />
+		Book Face social networking brought to you by the creators of Head Desk and Face Palm.
+		</span>
 		<?
 			include_once("./footer.php");
 		?>

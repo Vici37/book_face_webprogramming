@@ -1,0 +1,66 @@
+div#status_update {
+	position: fixed;
+	margin-top: 5em;
+	background-color: rgba(19,7,9,.7);
+	right: 0;
+	display: inline-block;
+	color: #cdcdcd;	
+	padding: 1em;
+	z-index: 0;
+}
+
+div#status_update * {
+	border: none;
+	outline: none;	
+}
+
+span#statuses {
+	display: inline-block;
+	margin-top: 5em;
+}
+
+span.status {
+	display: inline-block;
+	word-wrap: break-word;
+	width: 25em;
+	margin: .75em 0;
+	padding: 1em 2em;
+	box-shadow: 5px 5px 5px #130709;
+} 
+
+span.status.odd {
+	background-color: rgba(19,07,09,.7);
+}
+
+span.status.odd1 {
+	background-color: rgba(35,24,30,.7);
+}
+
+label.header {
+	font-size: 2em;
+	display: inline-block;
+	padding-bottom: .75em;
+	color: #cdcdcd;
+}
+
+textarea#status_update {
+	max-width: 25em;
+}
+
+textarea#status_update:focus {
+	box-shadow: inset 0 0 15px #130709;
+}
+
+input#submitStatus {
+	color: #cdcdcd;
+	padding: 1em 0;
+	background-color: rgba(19,7,9,.0);
+	-webkit-transition: background-color 1s ease;
+	-moz-transition: background-color 1s ease;
+	-o-transition: background-color 1s ease;
+	transition: background-color 1s ease;
+}
+
+input#submitStatus:hover {
+	background-color: rgba(19,7,9,.7);
+}

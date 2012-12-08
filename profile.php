@@ -1,16 +1,18 @@
 <?
 	if (isset($_REQUEST['update'])) {
-		// Update everything
+		// TODO: Update everything
 		header('location:./index.php?profile&id='.$_REQUEST['update']);
 	}
 	$query = "SELECT * FROM user_information WHERE user_id='".$_REQUEST['id']."'";
 	$personal = $db->query($query);
 	$personal = $personal->fetch_assoc();
 	if(isset($_REQUEST['edit']) && $_REQUEST['id'] == $_SESSION['user_id']) { ?>
-		<div id="name">
+		<span id="edit">
+			Still under development, won't update anything yet.<br/>
+			<label class="header">Edit Profile</label>
 			<form action="profile.php" method="post" accept-charset="utf-8">
 				<label for="email">Email</label><input type="text" name="email" value="<? echo $_SESSION['user']; ?>" id="email"><br/>
-				<label for="change">ChangPassword</label><input type="text" name="change" value="" id="change"><br/>
+				<label for="change">Change Password</label><input type="text" name="change" value="" id="change"><br/>
 				<label for="confirm">Confirm</label><input type="text" name="confirm" value="" id="confirm"><br/><br/>
 				<label for="First Name">First Name</label><input type="text" name="fname" value="<? echo $personal['first_name']; ?>" id="fname"><br/>
 				<label for="Last Name">Last Name</label><input type="text" name="lname" value="<? echo $personal['last_name']; ?>" id="lname"><br/>
@@ -21,23 +23,12 @@
 				<br/>
 				<input type="submit" value="Submit Changes">
 			</form>
-		</div>
+		</span>
 	<? } else { ?>
-		<div id="personal">
-			First name: <? echo $personal['first_name']; ?><br/>
-			Last name: <? echo $personal['last_name']; ?><br/>
-			<? if(isset($personal['gender'])) echo "Gender: ".$personal['gender']."<br/>"; 
-			include_once("status_box.php");
-			$query = "SELECT * FROM statuses INNER JOIN user_information ON statuses.user_id=user_information.user_id WHERE statuses.user_id='".$_SESSION['user_id']."' ORDER BY time DESC LIMIT 5";
-			$results = $db->query($query);
-			for ($i = 0; $i < $results->num_rows; ++$i) {
-				$row = $results->fetch_assoc(); ?>
-				<a href="./index.php?profile&id="<? echo $row['user_id']; ?> ref="name"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
-				<? echo $row['status'];?><br/>
-				<? echo $row['time'];?><br/>
-				<? $query = "SELECT * FROM comments WHERE status_id='".$row['status_id']."'";
-					$comments = $db->query($query);?>
-				<a href="./index.php?comments&id=<? echo $row['status_id']; ?>" ref="comments"><? echo $comments->num_rows." Comments";?></a><br/>
-			<? } ?>
+		<div id="buffer"></div>
+		<div id="personal"><label id="name">
+			<? echo $personal['first_name']; ?> <? echo $personal['last_name']; ?><br/></label>
+			<? if(isset($personal['gender'])) echo $personal['gender']."<br/>"; ?> 
 		</div>
-<? } ?>
+		<?	include_once("home.inc");
+		} ?>

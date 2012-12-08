@@ -18,14 +18,13 @@
 			$query .= "OR user_id='".$row['friend_user_id']."' ";
 		}
 		$results = $db->query($query);
-		echo "Your friends:<br/>";
+		echo "<span class=\"onFriendsPage\" id=\"friends\"><label class=\"header\">Friends</label><br/>";
 		for ($i = 0; $i < $results->num_rows; ++$i) { 
 			$row = $results->fetch_assoc(); 
 		?>
 			<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="profile"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
-	<? 	}
+	<? 	} echo "</span>";
 	} else {
-		echo "You have no friends. Make some now!";
-		include_once("./member.inc");
+		echo "<a id=\"noFriends\" href=\"./index.php?members\" ref=\"members\">You have no friends. Make some now!</a>";
 	}
 ?>

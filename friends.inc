@@ -26,7 +26,8 @@
 		?>
 			<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="profile"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
 	<? 	} echo "</span>";
-	} else {
-		echo "<a id=\"noFriends\" href=\"./index.php?members\" ref=\"members\">You have no friends. Make some now!</a>";
-	}
-?>
+	} else { ?>
+		<span id="no_friends">
+			<a id=\"noFriends\" href=\"./index.php?members\" ref=\"members\">You have no friends. Make some now!</a>
+		</span>
+	<? } ?>

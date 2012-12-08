@@ -1,0 +1,32 @@
+div#menu {
+	font-size: 1.5em;	
+	text-shadow: 5px 5px 10px #130709;
+} 
+
+div#menu a {
+	-webkit-transition: color 1s;	
+	-o-transition: color 1s;	
+	-moz-transition: color 1s;	
+	transition: color 1s;	
+	padding: .5em;
+}
+
+div#loggedInMenu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #6B0614;
+	text-shadow: 4px 4px 5px #130709;	
+	box-shadow: 5px 5px 10px #130709;	
+	padding: .5em 0;
+	z-index: 4001;
+} 
+ 
+div#menu a:visited {
+	color: #008A00;
+}
+
+div#menu a:hover {
+	color: #cdcdcd; 	
+} 

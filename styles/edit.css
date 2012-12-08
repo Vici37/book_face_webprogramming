@@ -1,0 +1,19 @@
+span#edit {
+	position: fixed;
+	left: 0;
+	top: 6em;
+	background-color: #cdcdcd;
+	color: #130709;
+	padding: 1em;
+}
+
+span#edit label.header {
+	color: #130709;
+	text-shadow: 2px 2px 2px #130709;
+}
+
+
+span#edit input {
+	position: absolute;
+	right: 1em; 
+} 

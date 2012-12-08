@@ -1,0 +1,35 @@
+div#friends {
+	padding-top: 4em;
+}
+
+a.friend { /*Do you see what I did there? */
+	color: #cdcdcd;
+	padding-left: 2em;
+	margin-bottom: 2em;
+}
+
+a.friend,
+a.notFriend {
+	font-size: 1.5em;
+}  
+
+span#friends {
+	right: 0;
+	background-color: rgba(19,7,9,.7);
+}
+
+span#notFriends {
+	left: 0;
+	background-color: rgba(205,205,205,.7);
+}
+
+span#friends,
+span#notFriends {
+	position: fixed;
+	padding: 1em; 
+	min-width: 30%;
+	max-width: 47%;
+	max-height: 70%;
+	overflow: auto;
+}
+

@@ -1,0 +1,13 @@
+span#aboutUs {
+	position: fixed;
+	padding: 1em; 
+	min-width: 30%;
+	max-width: 47%;
+	max-height: 70%;
+	overflow: auto;
+	top: 5em;
+	color: #008A00;
+	left: 0;
+	background-color: rgba(205,205,205,.7);
+	text-shadow: 1px 1px 1px #130709;
+}

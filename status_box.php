@@ -13,8 +13,8 @@
 <div id="status_update">
 	<form action="status_box.php" method="post" accept-charset="utf-8">
 		<input type="hidden" name="update_status" value="1">
-		<label>Status</label><br/>
-		<textarea name="status_update" rows="8" cols="40"></textarea>
-	<input type="submit" value="Submit">
+	<label class="header">Update Status</label><br/>
+		<textarea id="status_update" name="status_update" rows="8" cols="40"></textarea>
+	<input id="submitStatus" type="submit" value="Submit">
 	</form>
 </div>

@@ -1,6 +1,8 @@
 HOME PAGE:
 	Display last 20 status update made by current user and their friends (currently have last 20 status updates period)
 	                                                       -------------
+FRIENDS PAGE:
+	Need to add the ability to remove friends.
 
 PROFILE PAGE:
 	Display last 5 status update made by the user that belongs to the profile (currently shows last 20 status updates period)

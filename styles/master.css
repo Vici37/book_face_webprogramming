@@ -14,6 +14,23 @@ a:hover {
 	text-decoration: underline;
 }
 
+input[type="text"],
+input[type="password"] {
+	box-shadow: inset 0 0 7px #130709;
+	border: none;
+	outline: none;
+} 
+
 a#register:hover {
 	text-decoration: none; 
+}
+
+div.error {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+	color: red;
+	padding-top: .5em;
 }

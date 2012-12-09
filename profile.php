@@ -20,9 +20,9 @@
 				<span id="genders"><input type="radio" class="gender" name="gender" id="Male" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>/>Male
 				<input type="radio" class="gender" name="gender" id="Female" value="Female" <? if($personal['gender'] == "Female") echo "checked"; ?>/> Female
 				</span>
-				<input id="editInput" type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
+				<input type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
 				<br/></div>
-				<input type="submit" value="Submit Changes">
+				<input id="editSubmit" type="submit" value="Submit Changes">
 			</form>
 		</span>
 	<? } else { ?>

@@ -1,0 +1,35 @@
+span#reg {
+	position: absolute;
+	left: 0;
+	top: 6em;
+	background-color: #cdcdcd;
+	color: #130709;
+	padding: 1em;
+	width: 20em;
+}
+
+input.register {
+	position: absolute;
+	right: 1em;
+}
+
+label#register {
+	color: #130709;
+	text-shadow: 2px 2px 2px #130709;
+	margin-bottom: 1em;
+}
+
+input#submitReg {
+	border: none;
+	background-color: #cdcdcd;
+	-webkit-transition: text-shadow 1s;
+	-moz-transition: text-shadow 1s;
+	-o-transition: text-shadow 1s;
+	transition: text-shadow 1s;
+	margin-left: 4em;
+	margin-top: 1em;
+}
+
+input#submitReg:hover {
+	text-shadow: 5px 5px 2px #130709;
+}

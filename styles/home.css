@@ -1,4 +1,4 @@
-div#status_update {
+div.posting {
 	position: fixed;
 	margin-top: 5em;
 	background-color: rgba(19,7,9,.7);
@@ -19,7 +19,7 @@ span#statuses {
 	margin-top: 5em;
 }
 
-span.status {
+span.posted {
 	display: inline-block;
 	word-wrap: break-word;
 	width: 25em;
@@ -28,11 +28,11 @@ span.status {
 	box-shadow: 5px 5px 5px #130709;
 } 
 
-span.status.odd {
+span.odd {
 	background-color: rgba(19,07,09,.7);
 }
 
-span.status.odd1 {
+span.odd1 {
 	background-color: rgba(35,24,30,.7);
 }
 

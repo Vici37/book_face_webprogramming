@@ -30,6 +30,7 @@
 		<meta content="text/html; charset=iso-8859-1" http-equiv="content-type" />
 		<title>My Book Face</title>
 		<link rel="stylesheet" href="styles/register.css" type="text/css" />
+		<link rel="stylesheet" href="styles/comments.css" type="text/css" />
 		<link rel="stylesheet" href="styles/login.css" type="text/css" />
 		<link rel="stylesheet" href="styles/header.css" type="text/css" />
 		<link rel="stylesheet" href="styles/friends.css" type="text/css" />

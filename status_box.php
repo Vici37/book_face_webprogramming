@@ -10,7 +10,7 @@
 		header('location:./index.php?home');
 	} 
 ?>
-<div id="status_update">
+<div class="posting" id="status_update">
 	<form action="status_box.php" method="post" accept-charset="utf-8">
 		<input type="hidden" name="update_status" value="1">
 	<label class="header">Update Status</label><br/>

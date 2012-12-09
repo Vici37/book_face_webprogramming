@@ -11,16 +11,16 @@
 			Still under development, won't update anything yet.<br/>
 			<label class="header">Edit Profile</label>
 			<form action="profile.php" method="post" accept-charset="utf-8">
-				<label for="email">Email</label><input type="text" name="email" value="<? echo $_SESSION['user']; ?>" id="email"><br/>
-				<label for="change">Change Password</label><input type="text" name="change" value="" id="change"><br/>
-				<label for="confirm">Confirm</label><input type="text" name="confirm" value="" id="confirm"><br/><br/>
-				<label for="First Name">First Name</label><input type="text" name="fname" value="<? echo $personal['first_name']; ?>" id="fname"><br/>
-				<label for="Last Name">Last Name</label><input type="text" name="lname" value="<? echo $personal['last_name']; ?>" id="lname"><br/>
-				<label for="Gender">Gender</label>
-				<input type="radio" name="gender" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>>Male
-				<input type="radio" name="gender" value="Female" <? if($personal['gender'] == "Female") echo "checked"; ?>>Female
+				<div class="edit" id="changeEmail"><label for="email">Email</label><input type="text" name="email" value="<? echo $_SESSION['user']; ?>" id="email"><br/></div>
+				<div class="edit" id="changePassword"><label for="change">Change Password</label><input type="text" name="change" value="" id="change"><br/></div>
+				<div class="edit" id="changePassword2"><label for="confirm">Confirm</label><input type="text" name="confirm" value="" id="confirm"><br/><br/></div>
+				<div class="edit" id="changeName"><label for="First Name">First Name</label><input type="text" name="fname" value="<? echo $personal['first_name']; ?>" id="fname"><br/></div>
+				<div class="edit" id="changeLastName"><label for="Last Name">Last Name</label><input type="text" name="lname" value="<? echo $personal['last_name']; ?>" id="lname"><br/></div>
+				<div id="changeGender"><label for="Gender">Gender</label>
+				<input type="radio" class="gender" name="gender" id="Male" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>/>Male
+				<input type="radio" class="gender" name="gender" id="Female" value="Female" <? if($personal['gender'] == "Female") echo "checked"; ?>/> Female
 				<input type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
-				<br/>
+				<br/></div>
 				<input type="submit" value="Submit Changes">
 			</form>
 		</span>

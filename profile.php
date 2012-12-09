@@ -17,9 +17,10 @@
 				<div class="edit" id="changeName"><label for="First Name">First Name</label><input type="text" name="fname" value="<? echo $personal['first_name']; ?>" id="fname"><br/></div>
 				<div class="edit" id="changeLastName"><label for="Last Name">Last Name</label><input type="text" name="lname" value="<? echo $personal['last_name']; ?>" id="lname"><br/></div>
 				<div id="changeGender"><label for="Gender">Gender</label>
-				<input type="radio" class="gender" name="gender" id="Male" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>/>Male
+				<span id="genders"><input type="radio" class="gender" name="gender" id="Male" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>/>Male
 				<input type="radio" class="gender" name="gender" id="Female" value="Female" <? if($personal['gender'] == "Female") echo "checked"; ?>/> Female
-				<input type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
+				</span>
+				<input id="editInput" type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
 				<br/></div>
 				<input type="submit" value="Submit Changes">
 			</form>

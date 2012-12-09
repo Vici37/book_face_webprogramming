@@ -12,6 +12,10 @@ span#edit label.header {
 	text-shadow: 2px 2px 2px #130709;
 }
 
+div.edit {
+	margin-bottom: .5em; 
+}
+
 div.edit input {
 	position: absolute;
 	right: 1em;
@@ -20,3 +24,9 @@ div.edit input {
 span#edit input.gender {
 	width: 10px;
 }
+
+span#genders {
+	position: absolute;
+	right: 3em;
+}
+ 

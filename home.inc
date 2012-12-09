@@ -1,6 +1,10 @@
 <?
 	include_once("./status_box.php");
-	$query = "SELECT * FROM statuses WHERE user_id = ".$_REQUEST['id']." ORDER BY time DESC LIMIT 5";
+	if($_REQUEST['id']) { 
+		$query = "SELECT * FROM statuses WHERE user_id = ".$_REQUEST['id']." ORDER BY time DESC LIMIT 5";
+	} else {
+		$query = "SELECT * FROM statuses WHERE user_id IN (SELECT friend_user_id from friends_relations where user_id = ".$_SESSION['user_id'].") OR user_id = ".$_SESSION['user_id']." ORDER BY time DESC LIMIT 20";
+	} 
 	$result = $db->query($query);
 	?>
 	<span id="statuses">

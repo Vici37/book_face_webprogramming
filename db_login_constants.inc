@@ -1,6 +1,6 @@
 <?
-	$user = "book_face";
+	$user = "root";
 	$host = "localhost";
-	$password = "1234";
+	$password = "root";
 	$database = "Book_Face"
 ?>

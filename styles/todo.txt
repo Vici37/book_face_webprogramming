@@ -1,0 +1,11 @@
+HOME PAGE:
+	Display last 20 status update made by current user and their friends (currently have last 20 status updates period)
+	                                                       -------------
+
+PROFILE PAGE:
+	Display last 5 status update made by the user that belongs to the profile (currently shows last 20 status updates period)
+	                             --------------------------------------------
+	(Had this working until Tomas decided to import home.inc instead)
+
+PROFILE PAGE:
+	Allow editing of user information (currently nothing is done)

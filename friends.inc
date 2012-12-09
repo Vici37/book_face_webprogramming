@@ -1,4 +1,15 @@
 <?
+	/*$query = "SELECT * FROM friends_requests INNER JOIN user_information ON friends_requests.user_id=user_information.user_id WHERE requesting_user_id='".$_SESSION['user_id']."'";
+	$results = $db->query($query);
+	$friends_requests = array();
+	for ($i = 0; $i < $results->num_rows; $i++) {
+		 $row = $results->fetch_assoc();
+	}
+	echo "People requesting to be your friend:"
+	for ($i = 0; $i < count; $i++) {
+	?>
+		 <a href="./index.php?profile&id=<? echo $row['requesting_user_id'] 
+	}*/
 	$query = "SELECT * FROM friends_relations WHERE user_id='".$_SESSION['user_id']."'";
 	$results = $db->query($query);
 	if($results->num_rows > 0) {
@@ -15,7 +26,8 @@
 		?>
 			<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="profile"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
 	<? 	} echo "</span>";
-	} else {
-		echo "<a id=\"noFriends\" href=\"./index.php?members\" ref=\"members\">You have no friends. Make some now!</a>";
-	}
-?>
+	} else { ?>
+		<span id="no_friends">
+			<a id=\"noFriends\" href=\"./index.php?members\" ref=\"members\">You have no friends. Make some now!</a>
+		</span>
+	<? } ?>

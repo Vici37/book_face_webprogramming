@@ -1,4 +1,3 @@
-<div id='login'>
 	<span id='login'>
 	<form id='login' action="#" method="post">
 		<label id='user'>Email:</label><input id="user"  type="text" name="user" /><br />

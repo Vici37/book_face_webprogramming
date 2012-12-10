@@ -17,7 +17,7 @@
 		$isOdd = $i % 2 == 1;
 		echo "<span id='$i' class='posted odd$isOdd'>" ?>
 		<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="name"><? echo $user['first_name']." ".$user['last_name']; ?></a><br/>
-		<? echo $row['status'];?><br/>
+		<? echo stripslashes($row['status']);?><br/>
 		<? echo $row['time'];?><br/>
 		<? $query = "SELECT * FROM comments WHERE status_id='".$row['status_id']."'";
 			$comments = $db->query($query);?>

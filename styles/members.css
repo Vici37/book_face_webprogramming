@@ -23,13 +23,6 @@ span#notFriends {
 	background-color: rgba(205,205,205,.7);
 }
 
-span#requests {
-	left: 40 px;
-	top: 50 px;
-	position: fixed;
-	background-color: rgba(205,205,205,.7);
-}
-
 span#friends,
 span#notFriends {
 	position: fixed;

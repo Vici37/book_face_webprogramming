@@ -5,6 +5,7 @@ span#edit {
 	background-color: #cdcdcd;
 	color: #130709;
 	padding: 1em;
+	width: 30em;
 }
 
 span#edit label.header {
@@ -16,7 +17,8 @@ div.edit {
 	margin-bottom: .5em; 
 }
 
-div.edit input[type="text"] {
+div.edit input[type="text"],
+div.edit input[type="password"] {
 	position: absolute;
 	right: 1em;
 } 

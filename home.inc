@@ -12,9 +12,11 @@
 	<?
 	for ($i = 0; $i < $result->num_rows; ++$i) {
 		$row = $result->fetch_assoc(); 
+		$userQuery = $db->query("SELECT * FROM user_information WHERE user_id = ".$row['user_id']);
+		$user = $userQuery->fetch_assoc();
 		$isOdd = $i % 2 == 1;
 		echo "<span id='$i' class='posted odd$isOdd'>" ?>
-		<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="name"><? echo $row['first_name']." ".$row['last_name']; ?></a><br/>
+		<a href="./index.php?profile&id=<? echo $row['user_id']; ?>" ref="name"><? echo $user['first_name']." ".$user['last_name']; ?></a><br/>
 		<? echo $row['status'];?><br/>
 		<? echo $row['time'];?><br/>
 		<? $query = "SELECT * FROM comments WHERE status_id='".$row['status_id']."'";

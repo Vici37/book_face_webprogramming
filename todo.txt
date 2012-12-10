@@ -1,7 +1,2 @@
-FRIENDS PAGE:
-	Need to add the ability to remove friends.
-	Need to finish friend requests
-
 PROFILE PAGE:
-	Allow editing of user information (currently nothing is done)
-
+	Styling issues with the edit profile part.

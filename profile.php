@@ -105,7 +105,8 @@
 				<label class="header">Edit Profile</label>
 				<form action="profile.php" method="post" accept-charset="utf-8">
 					<div class="edit" id="changeEmail"><label for="email">Email</label><input type="text" name="email" value="<? echo $_SESSION['user']; ?>" id="email"><br/></div>
-					<div class="edit" id="changePassword"><label for="change">Change Password</label><input type="password" name="change" value="" id="change"><br/></div>
+					<div class="edit" id="currentPassword"><label for="oldpassword">Old Password (required)</label><input type="password" name="oldpassword" value=""></div>
+					<div class="edit" id="changePassword"><label for="change">New Password</label><input type="password" name="change" value="" id="change"><br/></div>
 					<div class="edit" id="changePassword2"><label for="confirm">Confirm</label><input type="password" name="confirm" value="" id="confirm"><br/><br/></div>
 						
 					<div class="edit" id="changeName"><label for="First Name">First Name</label><input type="text" name="fname" value="<? echo $personal['first_name']; ?>" id="fname"><br/></div>
@@ -114,7 +115,6 @@
 					<span id="genders"><input type="radio" class="gender" name="gender" id="Male" value="Male" <? if($personal['gender'] == "Male") echo "checked"; ?>/>Male
 					<input type="radio" class="gender" name="gender" id="Female" value="Female" <? if($personal['gender'] == "Female") echo "checked"; ?>/> Female
 					</span><br/><br/>
-					<div class="edit" id="currentPassword"><label for="oldpassword">Old Password (required)</label><input type="password" name="oldpassword" value=""></div>
 					<input type="hidden" name="update" value="<? echo $_SESSION['user_id']; ?>">
 					<input id="editSubmit" type="submit" value="Submit Changes">
 				</form>

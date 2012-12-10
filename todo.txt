@@ -1,2 +1,0 @@
-PROFILE PAGE:
-	Styling issues with the edit profile part.

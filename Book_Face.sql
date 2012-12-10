@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
 --
 -- Dumping data for table `comments`
 --
-
+/*
 INSERT INTO `comments` (`status_id`, `user_id`, `comment`, `time`) VALUES
 (3, 24, 'This is a comment\r\n\r\n-Troy', '2012-12-10 01:01:01'),
 (3, 28, 'This is another comment', '2012-12-10 01:01:02'),
@@ -45,7 +45,7 @@ INSERT INTO `comments` (`status_id`, `user_id`, `comment`, `time`) VALUES
 (40, 29, 'I''m commenting on my own status!', '2012-12-03 11:25:35'),
 (41, 29, 'yadda', '2012-12-03 12:08:24'),
 (41, 29, 'as;ldkfjads;lfkjads;fkljads;f', '2012-12-03 12:09:19');
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `friends_relations` (
 --
 -- Dumping data for table `friends_relations`
 --
-
+/*
 INSERT INTO `friends_relations` (`user_id`, `friend_user_id`) VALUES
 (30, 29),
 (24, 29),
@@ -70,7 +70,7 @@ INSERT INTO `friends_relations` (`user_id`, `friend_user_id`) VALUES
 (24, 31),
 (30, 24),
 (31, 30);
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -85,12 +85,12 @@ CREATE TABLE IF NOT EXISTS `friend_requests` (
 --
 -- Dumping data for table `friend_requests`
 --
-
+/*
 INSERT INTO `friend_requests` (`user_id`, `requesting_user_id`) VALUES
 (28, 31),
 (24, 31),
 (29, 23);
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `statuses` (
 --
 -- Dumping data for table `statuses`
 --
-
+/*
 INSERT INTO `statuses` (`status_id`, `user_id`, `status`, `time`) VALUES
 (3, 24, 'My name is Troy.', '2012-12-02 20:56:26'),
 (50, 29, 'a', '2012-12-03 12:10:21'),
@@ -133,7 +133,7 @@ INSERT INTO `statuses` (`status_id`, `user_id`, `status`, `time`) VALUES
 (39, 24, 'b', '2012-12-02 21:53:04'),
 (51, 31, 'YAY!\r\n', '2012-12-07 22:16:59'),
 (52, 31, 'Friend requests are working! :)', '2012-12-09 11:43:51');
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 -- Dumping data for table `users`
 --
-
+/*
 INSERT INTO `users` (`email`, `password`, `user_id`) VALUES
 ('whatever@here1.com', 'ddfcbc820f415bda61c38516829c508d4762d9a781dc9bdb52d04dc20036dbd8313ed0556b7be712086b5ab308c88e926323737fe20e7c94', 30),
 ('whatever@here.com', 'b577496958b1c54c281ae6b7897ee340236afbad81dc9bdb52d04dc20036dbd8313ed0557ffe274f8c8c08bba8c6843f4f0d6b1fab23c351', 29),
@@ -159,7 +159,7 @@ INSERT INTO `users` (`email`, `password`, `user_id`) VALUES
 ('a@a.a', 'd656370089fedbd4313c67bfdc24151fb7c0fe8b81dc9bdb52d04dc20036dbd8313ed0557e309907e0e24722061fd0225c732fe9a46f19a0', 24),
 ('asdf', '3da541559918a808c2402bba5012f6c60b27661c81dc9bdb52d04dc20036dbd8313ed055d631600ee726f291e0aed59252c68b6565ea6803', 23),
 ('b@b.b', '3bb8cc945837c65a6562a3717c5a494828aea7e481dc9bdb52d04dc20036dbd8313ed05546ea5e1a2c6a354cd19c1c9989ea8e830a3ad2bb', 31);
-
+*/
 -- --------------------------------------------------------
 
 --
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `user_information` (
 --
 -- Dumping data for table `user_information`
 --
-
+/*
 INSERT INTO `user_information` (`user_id`, `first_name`, `last_name`, `gender`) VALUES
 (25, 'asdf', 'adsf', NULL),
 (24, 'asdf', 'fdsa', NULL),
@@ -185,7 +185,7 @@ INSERT INTO `user_information` (`user_id`, `first_name`, `last_name`, `gender`) 
 (29, 'troy', 'sornson', 'Male'),
 (30, 'asdfads', 'fadsfadsfasd', NULL),
 (31, 'Brianna', 'Fidder', 'Female');
-
+*/
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

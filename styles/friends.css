@@ -1,6 +1,6 @@
 span#friends.onFriendsPage { 
 	left: 0;
-	margin-top: 5em;
+	top: 5em;
 }
 
 span#no_friends {

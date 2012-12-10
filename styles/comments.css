@@ -1,0 +1,26 @@
+label#statusComment {
+	margin-top: 3em;
+}
+
+span#statusInQuestion {
+	color: #130709;
+	background-color: #cdcdcd;
+} 
+
+div.posting#comments {
+	top: 2em; 
+} 
+
+input#comment {
+	background-color: rgba(19,7,9,0);
+	color: #cdcdcd;
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	transition: background-color 1s;
+	border: none;
+}  
+
+input#comment:hover {
+	background-color: rgba(19,7,9,1);
+} 

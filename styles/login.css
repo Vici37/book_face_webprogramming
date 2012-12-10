@@ -9,12 +9,18 @@ span#login {
 	display: inline-block;
 	margin-top: 5em;
 	width: 25em;
-	height: 10em;
 	position: absolute;
 	left: 0;
 	color: #130709;	
 	box-shadow: 8px 8px 10px #30050E;
 }
+
+input#user,
+input#pass {
+	position: absolute;
+	right: 6px;	
+	margin-top: 1em;
+} 
 
 input#user:focus,
 input#pass:focus {
@@ -43,6 +49,7 @@ a#register {
 	background-color: #cdcdcd;
 	font-size: 1.75em;
 	padding: .05em .60em;
+	margin-bottom: .5em;
 	-webkit-transition: text-shadow 1s;
 	-moz-transition: text-shadow 1s;
 	-o-transition: text-shadow 1s;
@@ -55,7 +62,7 @@ input#signin {
 
 input#signin:hover,
 a#register:hover {
-	text-shadow: 5px 5px 10px #30050E; 
+	text-shadow: 5px 5px 2px #30050E; 
 }
 
 form#login {

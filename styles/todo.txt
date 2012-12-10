@@ -1,11 +1,7 @@
-HOME PAGE:
-	Display last 20 status update made by current user and their friends (currently have last 20 status updates period)
-	                                                       -------------
-
-PROFILE PAGE:
-	Display last 5 status update made by the user that belongs to the profile (currently shows last 20 status updates period)
-	                             --------------------------------------------
-	(Had this working until Tomas decided to import home.inc instead)
+FRIENDS PAGE:
+	Need to add the ability to remove friends.
+	Need to finish friend requests
 
 PROFILE PAGE:
 	Allow editing of user information (currently nothing is done)
+

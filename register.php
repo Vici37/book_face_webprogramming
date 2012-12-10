@@ -43,20 +43,23 @@
 		}
 	}
 ?>
-<div id="error">
+<span id="reg">
+<div class="error">
 	<? if(isset($_REQUEST['error'])) echo $_REQUEST['error']; ?>	
 </div>
 <div id='register'>
 	<form action="./register.php" method="post" accept-charset="utf-8">
-		<label for="fname">First Name</label><input type="text" name="fname" value="<? if($_REQUEST['fname']!=null) echo $_REQUEST['fname']; ?>" id="fname"><br/>
-		<label for="lname">Last Name</label><input type="text" name="lname" value="<? if($_REQUEST['lname']!=null) echo $_REQUEST['lname']; ?>" id="lname"><br/>
-		<label for="email">Email</label><input type="text" name="email" value="<? if($_REQUEST['email']!=null) echo $_REQUEST['email']; ?>" id="email"><br/>
-		<label for="password">Password:</label><input type="password" name="password" value="" id="password"><br/>
-		<label for="Confirm Password">Confirm Password</label><input type="password" name="confirm" value="" id="Confirm Password"><br/>
-		<label for="gender">Gender (Optional)</label>
-		<input type="radio" name="gender" value="Male" <? if($_REQUEST['gender'] == "male") echo "checked"; ?>> Male
-		<input type="radio" name="gender" value="Female"<? if($_REQUEST['gender'] == "female") echo "checked"; ?>> Female <br/>
+		<label id="register" class="header">Register</label>
+		<div class="edit" id="regFirstName"><label for="fname">First Name</label><input class="register" type="text" name="fname" value="<? if($_REQUEST['fname']!=null) echo $_REQUEST['fname']; ?>" id="fname"></div>
+		<div class="edit" id="regLastName"><label for="lname">Last Name</label><input type="text" class="register" name="lname" value="<? if($_REQUEST['lname']!=null) echo $_REQUEST['lname']; ?>" id="lname"></div>
+		<div class="edit" id="regEmail"><label for="email">Email</label><input type="text" name="email" class="register" value="<? if($_REQUEST['email']!=null) echo $_REQUEST['email']; ?>" id="email"></div>
+		<div class="edit" id="regPassword"><label for="password">Password:</label><input type="password" name="password" class="register" value="" id="password"></div>
+		<div class="edit" id="regPassword2"><label for="Confirm Password">Confirm Password</label><input type="password" name="confirm" class="register" value="" id="Confirm Password"></div>
+		<div class="edit" id="regGender"><label for="gender">Gender (Optional)</label>
+		<span id="maleRadio"><input type="radio" name="gender" value="Male" <? if($_REQUEST['gender'] == "male") echo "checked"; ?>> Male</span>
+		<span id="femaleRadio"><input type="radio" name="gender" value="Female"<? if($_REQUEST['gender'] == "female") echo "checked"; ?>> Female</span></div>
 		<input type="hidden" name="registering" value="1">
-		<input type="submit" value="Continue &rarr;">
+		<input id="submitReg" type="submit" value="Continue">
 	</form>
 </div>
+</span>

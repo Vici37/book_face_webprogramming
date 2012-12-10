@@ -12,8 +12,35 @@ span#edit label.header {
 	text-shadow: 2px 2px 2px #130709;
 }
 
+div.edit {
+	margin-bottom: .5em; 
+}
 
-span#edit input {
+div.edit input[type="text"] {
 	position: absolute;
-	right: 1em; 
+	right: 1em;
 } 
+
+input[type="radio"] {
+	width: 10px;
+}
+
+span#genders {
+	position: absolute;
+	right: 3em;
+}
+
+input#editSubmit {
+	background-color: #cdcdcd;
+	border: none;
+	-webkit-transition: text-shadow 1s;	
+	-moz-transition: text-shadow 1s;	
+	-o-transition: text-shadow 1s;
+	transition: text-shadow 1s;
+	margin-top: 1em;
+	margin-left: 5em;
+}  
+	
+input#editSubmit:hover {
+	text-shadow: 3px 3px 6px #30050E; 
+}
